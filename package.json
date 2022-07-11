@@ -1,0 +1,13 @@
+{
+  "name": "gdo6-moment",
+  "version": "6.09",
+  "description": "Moment.js module for GDO6",
+  "main": "Module_Moment.php",
+  "repository": "ssh://git@github.com/gizmore/gdo6-moment",
+  "author": "gizmore",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27"
+  }
+}
