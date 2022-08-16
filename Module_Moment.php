@@ -2,7 +2,6 @@
 namespace GDO\Moment;
 
 use GDO\Core\GDO_Module;
-use GDO\Javascript\Module_Javascript;
 
 /**
  * Moment.js bindings for gdo6.
@@ -16,7 +15,7 @@ final class Module_Moment extends GDO_Module
 	
 	public function onIncludeScripts() : void
 	{
-		$min = Module_Javascript::instance()->cfgMinAppend();
+		$min = $this->cfgMinAppend();
 		
 		$this->addBowerJS("moment/min/moment-with-locales$min.js");
         $this->addBowerJS("moment-timezone/builds/moment-timezone-with-data$min.js");
