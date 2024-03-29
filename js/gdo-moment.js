@@ -8,7 +8,8 @@ window.GDO.Moment = {
 		{
 			let e = es[i];
 			let t = parseFloat(e.getAttribute('data-timestamp')) * 1000;
-			e.innerHTML = (new moment(t)).fromNow(false);
+			let m = new moment(t);
+			e.innerHTML = m.fromNow(false);
 		}
 	},
 
@@ -59,5 +60,5 @@ window.GDO.Moment = {
 		return strtr(format, replace);
 	},
 };
-
+window.GDO.Moment.timer();
 setInterval(window.GDO.Moment.timer, 1000);
