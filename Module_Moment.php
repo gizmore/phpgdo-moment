@@ -21,7 +21,7 @@ final class Module_Moment extends GDO_Module
 
 		$this->addBowerJS("moment/min/moment-with-locales$min.js");
 		$this->addBowerJS("moment-timezone/builds/moment-timezone-with-data$min.js");
-		$this->addJS('js/gdo6-moment.js');
+		$this->addJS('js/gdo-moment.js');
 	}
 
 	/**

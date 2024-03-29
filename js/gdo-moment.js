@@ -2,6 +2,17 @@
 
 window.GDO.Moment = {
 
+	timer: function() {
+		let es = document.querySelectorAll('.gdt-age');
+		for (let i=0; i < es.length; i++)
+		{
+			let e = es[i];
+			let t = parseFloat(e.getAttribute('data-timestamp')) * 1000;
+			e.innerHTML = (new moment(t)).fromNow(false);
+		}
+	},
+
+
 	/**
 	 * Convert PHP dateformat to moment.js
 	 */
@@ -48,3 +59,5 @@ window.GDO.Moment = {
 		return strtr(format, replace);
 	},
 };
+
+setInterval(window.GDO.Moment.timer, 1000);
